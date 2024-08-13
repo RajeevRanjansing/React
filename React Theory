@@ -21,14 +21,14 @@ ReactDOM.render(
 
 //2nd method to add multiple jsx element(by using square bracket)
 
-// ReactDOM.render(
-//     [
-//         <h1>Rajeev Singh</h1>,
-//         <p>Rajeev</p>,
-//         <p>Raj</p>
-//     ],
-//     document.querySelector("#root")
-// );
+ReactDOM.render(
+     [
+         <h1>Rajeev Singh</h1>,
+         <p>Rajeev</p>,
+         <p>Raj</p>
+     ],
+ document.querySelector("#root")
+ );
 
 
 
