@@ -1,4 +1,4 @@
-    //Lecture 1
+ //Theory Portion of Lecture 1 to Lecture 10
 
 jsx means uses of HTML in react is called jsx
 render method takes only one argument.for example=<h1> Hello World </h1>
@@ -56,6 +56,16 @@ ReactDOM.render(
      </>,
      document.querySelector("#root")
  );
+
+
+//Lecture 11
+
+const name="Rajeev Singh";
+
+ReactDOM.render(
+<h1>My name is {name}</h1>
+,document.querySelector("#root")
+);
 
 
 
