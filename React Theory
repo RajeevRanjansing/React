@@ -30,5 +30,34 @@ ReactDOM.render(
  document.querySelector("#root")
  );
 
+//Note
+element add ka jo 1st method tha usme jo "div" add karke multiple jsx element rakhte the n to usme inspect karne pr jo root div tha wo to tha hi aur hmlog jo div bana kr jsx element add karte ho wo bhi div add ho jata tha(div ke ander div);
+so do baar div na aaye isliye React fragmentation use karte hai.
+
+//3rd method to add multiple jsx element(by using React.Fragment)
+
+ReactDOM.render(
+     <React.Fragment>        //It is little bit faster as compared to div
+         <h1>Rajeev Singh</h1>
+         <p>Rajeev</p>
+         <p>How are you?</p>
+     </React.Fragment>,
+     document.querySelector("#root")
+ );
+
+//4th method to add multiple jsx element(in place of <React.Fragment> is <>)
+
+
+// ReactDOM.render(
+//     <>                          
+//         <h1>Rajeev Singh</h1>
+//         <p>Rajeev</p>
+//         <p>How are you?</p>
+//         <p>What are you doing?</p>
+//     </>,
+//     document.querySelector("#root")
+// );
+
+
 
 
