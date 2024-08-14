@@ -59,6 +59,7 @@ ReactDOM.render(
 
 
 //Lecture 11
+//program 1
 
 const name="Rajeev Singh";
 
@@ -66,6 +67,98 @@ ReactDOM.render(
 <h1>My name is {name}</h1>
 ,document.querySelector("#root")
 );
+
+//program 2
+//Method 1
+
+const fname="Rajeev";
+const lname="Singh";
+
+ReactDOM.render(
+<>
+<h1>My name is {fname}{lname}</h1>
+</>,
+document.querySelector("#root"));
+
+//Method 2
+const fname="Rajeev";
+const lname="Singh";
+
+ReactDOM.render(
+<>
+<h1>My name is {fname + " "+ lname}</h1>
+</>,
+document.querySelector("#root")
+);
+
+////Method 3
+
+const fname="Rajeev";
+const lname="Singh";
+
+ReactDOM.render(
+<>
+<h1>My name is {`${fname} ${lname}`}</h1>
+</>,
+document.querySelector("#root"));
+
+////Method 4
+
+const fname="Rajeev";
+const lname="Singh";
+
+ReactDOM.render(
+<>
+<h1>{`my name is ${fname} ${lname}`}</h1>
+</>,
+document.querySelector("#root"));
+
+
+//Practice Question 
+
+const fname="Rajeev Singh";
+const date=new Date().toLocaleDateString();
+const time=new Date().toLocaleTimeString();
+
+ReactDOM.render(
+    <>
+    <h1>My name is {fname}</h1>
+    <p>Today date is {date}</p>
+    <p>Today date is {time}</p>
+    </>,
+    document.querySelector("#root")
+);
+
+//Add image
+
+ReactDOM.render(
+<>
+<h1 contentEditable="true">My name is Rajeev Singh</h1>
+<img src="https://picsum.photos/200/300" alt="random iimage"></img>
+</>,
+document.querySelector("#root")
+);
+
+//2nd method to add image
+
+const img1="https://picsum.photos/200/300";
+const img2="https://picsum.photos/250/300";
+const img3="https://picsum.photos/300/300";
+const img4="https://picsum.photos/350/300";
+
+const links="https://www.thapatechnical.com";
+
+ReactDOM.render(
+    <>
+     <h1 contentEditable="true">My name is Rajeev Singh</h1>
+    <img src={img1} alt="random image"></img>
+    <img src={img2} alt="random image"></img>
+    <img src={img3} alt="random image"></img>
+    <img src={img4} alt="random image"></img>
+    <a href={links} target="_blank">Img</a>
+    </>,
+    document.querySelector("#root")
+); 
 
 
 
