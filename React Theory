@@ -45,18 +45,17 @@ ReactDOM.render(
      document.querySelector("#root")
  );
 
-//4th method to add multiple jsx element(in place of <React.Fragment> is <>)
+//4th method to add multiple jsx element(in place of <React.Fragment> is <>(known as short synatx))
 
-
-// ReactDOM.render(
-//     <>                          
-//         <h1>Rajeev Singh</h1>
-//         <p>Rajeev</p>
-//         <p>How are you?</p>
-//         <p>What are you doing?</p>
-//     </>,
-//     document.querySelector("#root")
-// );
+ReactDOM.render(
+     <>                          
+         <h1>Rajeev Singh</h1>
+         <p>Rajeev</p>
+         <p>How are you?</p>
+         <p>What are you doing?</p>
+     </>,
+     document.querySelector("#root")
+ );
 
 
 
