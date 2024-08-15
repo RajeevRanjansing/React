@@ -381,4 +381,25 @@ function div(a,b){
 
 export {Add, sub, mul, div};
 
+---------------***************------------------
+//Map Concept
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+<script>
+//for Example, we have an array 
+
+const oldarr=["Aman","Amit","Akash"]
+console.log(oldarr[0]);                 //output=Aman
+
+</script> 
+
+ReactDOM.render(
+    <h1>My name is Rajeev</h1>,
+     document.querySelector("#root")
+);
+
+
+
 
