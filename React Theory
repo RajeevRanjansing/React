@@ -233,7 +233,152 @@ ReactDOM.render(
         document.querySelector("#root")
     );
 
+---------------------------********************------------------------
+//Question is according to time,print good morning good afternoon,good night
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+    let curDate=new Date(2020,5,5,10);
+    curDate=curDate.getHours();
+    let greeting="";
+    let Style={};
+
+    if(curDate>=1 && curDate<12){
+        greeting="Good morning";
+        Style.color="green";
+    }
+    else if(curDate>=12 && curDate<19){
+        greeting="Good afternoon";
+        Style.color="orange";
+    }
+    else{
+        greeting="Good night";
+        Style.color="black";
+    }
+
+ReactDOM.render(
+    <h1>Hello sir <span style={Style}>{greeting}</span></h1>,document.querySelector("#root")
+);
+
+---------------**********---------------------
+//New Program
+
+import React from "react";
+import ReactDOM from "react-dom";
+import Heading from "./Heading";
+import App from "./App";
+
+ReactDOM.render(
+    <>
+    <Heading></Heading>
+    <App></App>
+    </>,
+    document.querySelector("#root")
+);
 
 
+//Heading file
+
+import React from 'react';
+
+function Heading(){
+    return <h1>My name is Rajeev Singh</h1>;
+}
+export default Heading; 
+
+//App file
+
+import React from "react";
+function App(){
+    return <p>I live in sarigam</p>;
+}
+export default App;
+
+---------------**********---------------------
+//New Program
+
+import React from "react";
+import ReactDOM from "react-dom";
+import youtuber from "./App";
+
+ReactDOM.render(
+    <h1>{youtuber}</h1>,
+    document.querySelector("#root")
+);
+
+const youtuber="Rajeev Kumar";
+export default youtuber;
+
+---------------**********---------------------
+//New Program
+
+import React from "react";
+import ReactDOM from "react-dom";
+import name,{hobby} from "./App";
+
+ReactDOM.render(
+    <>
+    <h1>{name}</h1>
+    <h1>{hobby}</h1>    
+   </> 
+   ,document.querySelector("#new")
+);
+
+//App file
+
+const name="Rajeev Singh";
+const hobby="Business";
+
+export default name;
+export {hobby};        //Alway write one time default
+
+
+---------------**********---------------------
+//New Program
+
+import React from "react";
+import ReactDOM from "react-dom";
+import {Add, sub, mul, div}from "./App";
+
+ReactDOM.render(
+    <>
+    <ul>
+   <li>Sum of the number is {Add(10, 21)}</li>
+   <li>sub of the number is {sub(100, 21)}</li>
+   <li>mul of the number is {mul(10, 21)}</li>
+   <li>div of the number is {div(100, 21)}</li>
+
+    </ul>
+    </>,
+    document.querySelector("#new")
+);
+
+//App file
+
+import React from "react";
+
+function Add(a,b){
+    return a+b;
+}
+
+function sub(a,b){
+    return a-b;
+}
+
+function mul(a,b){
+    return a*b;
+}
+
+function div(a,b){
+    return a/b;
+    
+    or
+    let div=a/b;
+    div=div.toFixed(2);  //it will give two number after the point
+    return div;
+}
+
+export {Add, sub, mul, div};
 
 
