@@ -200,6 +200,7 @@ ReactDOM.render(
 -------------*****************-----------------
 
 //Inline Style
+//1st method
 
 import React from "react";
 import ReactDOM from "react-dom";
@@ -219,13 +220,18 @@ ReactDOM.render(
     );
 
 
+//2nd method
+
+import React from "react";
+import ReactDOM from "react-dom";
+
 ReactDOM.render(
         <>
         <h1 style={  { color:"#2196F3",textTransform:"capitalize",}}>  My Name is Rajeev Singh</h1>
         <h2>I am pursuing BE degree from laxmi institute of technology</h2>
         </>,
         document.querySelector("#root")
-    )
+    );
 
 
 
