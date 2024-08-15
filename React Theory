@@ -400,6 +400,19 @@ ReactDOM.render(
      document.querySelector("#root")
 );
 
+--------------**************-------------------
 
+//ctrl + i  for emoji;
+
+--------------***************----------------
+
+//Lecture no. 30
+
+React Hook
+
+Hooks are the function which "hook into" React state and lifecycle features from function component.
+Hooks are the new feature introduced in the React 16.8version.
+Hooks should always be used at the top level of the React functions.
+It does not work inside classes.
 
 
