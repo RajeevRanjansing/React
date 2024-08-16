@@ -1,1 +1,103 @@
+----------------------**********************---------------------------------------
+//HTML file
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div id="inner"></div>
+    </div>
+    
+  </body>
+</html>
+
+----------------------**********************---------------------------------------
+
+//CSS file
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vmin;
+}
+
+button{
+  width:120px;
+  height: 60px;
+  font-size: 20px;
+  background-color: #9b59b6;
+  color: white;
+  border-color: blue;
+  
+}
+
+h1{
+  font-size:60px ;
+  text-align: center;
+}
+
+----------------------**********************---------------------------------------
+
+//App.js file
+
+import React,{useState} from "react";
+
+const App=()=>{
+  const state=useState();
+
+  const [count,setCount]=useState(0);
+
+  const increment=()=>{
+    setCount(count+1);
+
+  };
+
+  return(
+    <>
+    <h1>{count}</h1>
+    
+    <button onClick={increment}>Click Here</button>
+    </>
+  );
+};
+
+export default App;
+
+----------------------**********************---------------------------------------
+
+//index.js file
+
+import React,{useState} from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+
+
+ReactDOM.render(
+  <App></App>,
+  document.querySelector("#inner")
+);
 
