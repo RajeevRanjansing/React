@@ -85,8 +85,8 @@ const decrement=()=>{
   return(
     <>
     <h1>{count}</h1>
-    
-    <button onClick={increment}>Click Here</button>
+    <button onClick={increment}>increment</button>
+    <button onClick={decrement}>decrement</button>
     </>
   );
 };
