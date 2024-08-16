@@ -415,4 +415,6 @@ Hooks are the new feature introduced in the React 16.8version.
 Hooks should always be used at the top level of the React functions.
 It does not work inside classes.
 
+useState(known as Hook in react) is an array that return two items.
+
 
