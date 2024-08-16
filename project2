@@ -1,1 +1,110 @@
+-------------------------************************----------------------------
 
+//HTML file
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div id="inner"></div>
+    </div>
+    
+  </body>
+</html>
+
+-------------------------************************----------------------------
+
+//index.css
+
+*{
+  padding:0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#root{
+  height:100vmin;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#inner{
+  text-align: center;
+  background-color: coral;
+  color:white;
+  font-size: 30px;
+  border:3px solid greenyellow;
+  border-radius: 40px;
+  width:20%;
+  height:30vmin;
+}
+button{
+  width:190px;
+  height: 60px;
+  font-size: 20px;
+  background-color: #9b59b6;
+  color: white;
+  border:3px solid white;
+  margin-top: 50px;
+}
+
+-------------------------************************----------------------------
+
+//App.jsx
+
+import React,{useState} from "react";
+
+const App=()=>{
+let time=new Date().toLocaleTimeString();
+let date=new Date().toLocaleDateString();
+
+const [ctime, setCtime]=useState(time);
+
+const UpdateTime=()=>{
+    time=new Date().toLocaleTimeString();
+    setCtime(time);
+};
+
+return(
+    <>
+    <h1>{time}</h1>
+    <h1>{date}</h1>
+    <button onClick={UpdateTime}>CURRENT TIME</button>
+    </>
+)
+};
+export default App;
+
+-------------------------************************----------------------------
+
+//index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import "./index.css";
+import App from "./App";
+
+ReactDOM.render(
+  <>
+  <App></App>
+  </>,
+  
+  document.querySelector("#inner")
+);
