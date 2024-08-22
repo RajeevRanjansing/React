@@ -424,3 +424,7 @@ Spread Operator
 The Syntax is three dots(...) followed by the array(or iterable). 
 It expand the array into individual elements. So,it can be used to expand the array in a places where zero or more elements are expected.
 
+const FullName=["Rajeev","Singh"];
+
+const Biodata=[1, ...FullName,20,"male"];
+console.log(Biodata);                     //output=[1, "Rajeev","Singh",20,"male"]
