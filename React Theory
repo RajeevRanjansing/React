@@ -428,3 +428,9 @@ const FullName=["Rajeev","Singh"];
 
 const Biodata=[1, ...FullName,20,"male"];
 console.log(Biodata);                     //output=[1, "Rajeev","Singh",20,"male"]
+
+
+//Related to interview question
+Q. Which is inbuilt element/tag or custom component
+Ans:-inbuilt tag alway start with small letter ex:- button, h1
+      Custom component alway start with capital letter ex:-AddIcon(for use of AddIcon we are importing this)
