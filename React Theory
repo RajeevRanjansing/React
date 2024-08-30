@@ -429,8 +429,59 @@ const FullName=["Rajeev","Singh"];
 const Biodata=[1, ...FullName,20,"male"];
 console.log(Biodata);                     //output=[1, "Rajeev","Singh",20,"male"]
 
-
+i\
 //Related to interview question
 Q. Which is inbuilt element/tag or custom component
 Ans:-inbuilt tag alway start with small letter ex:- button, h1
       Custom component alway start with capital letter ex:-AddIcon(for use of AddIcon we are importing this)
+
+
+---------------------**********************-----------------------------------
+
+Lecture no. 52
+
+create context is used when we have three or more file and you have some data in file3 and you want to access in file2 and some data in file2 and you want to access in file1, where we can use create context
+
+Example:-
+ //in file3
+
+import React,{createContext} from "react";
+ import ComA from "./ComA";
+
+ const FirstName=createContext();
+ const lastName=createContext();
+ 
+const App=()=>{
+
+return(
+        <>
+        <FirstName.Provider value={"Rajeev"}>
+        <lastName.Provider value={"Singh"}>
+        <ComA />
+        </lastName.Provider>
+        </FirstName.Provider>
+        </>
+    )
+}
+
+export default App;
+export {FirstName,lastName};
+
+//in file2
+
+import React,{useContext} from "react";
+import {FirstName,lastName} from "./App";
+
+const ComB=()=>{
+
+    const fname=useContext(FirstName);
+    const lname=useContext(lastName);
+
+    return(
+        <>
+        <h1>My name is {fname} {lname}</h1>
+        </>
+    )
+}
+export default ComB;
+const FirstName=create Context();
